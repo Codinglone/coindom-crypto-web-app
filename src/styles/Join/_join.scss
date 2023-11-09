@@ -1,0 +1,99 @@
+@use "../global/" as *;
+
+.join-section {
+  background-color: $bg-black;
+  padding: 10rem;
+}
+
+.join-content {
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__btc,
+  &__eth {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+  }
+
+  &__btc {
+    top: 50px;
+    left: 215px;
+    animation: movecoin 2s infinite;
+    @media (max-width: 1100px) {
+      left: 0px;
+    }
+
+    @media (max-width: 1300px) {
+      left: 80px;
+    }
+
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+
+  &__eth {
+    top: 50px;
+    right: 215px;
+    animation: movecoin 2s infinite;
+    @media (max-width: 1100px) {
+      right: 0px;
+    }
+    @media (max-width: 1300px) {
+      right: 80px;
+    }
+
+    @media (max-width: 1100px) {
+      display: none;
+    }
+  }
+
+  h2 {
+    font-size: 10rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+
+    @media (max-width: 550px) {
+      font-size: 7rem;
+    }
+
+    span {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: $color-blue-purp;
+    }
+  }
+
+  p {
+    font-size: $h4-size;
+    margin-bottom: 10rem;
+  }
+
+  a {
+    font-size: $text-normal;
+    font-weight: 600;
+    padding: 2rem 4rem;
+    background: $color-blue-purp;
+    color: $color-white;
+    border-radius: 10rem;
+    transition: all 0.2s;
+  }
+}
+
+@keyframes movecoin {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}

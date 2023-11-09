@@ -1,0 +1,69 @@
+@use "../global/" as *;
+
+footer {
+  background-color: $bg-black;
+  width: 100%;
+  height: 35rem;
+  background-image: url("/src/images/footer/footer-bg.png");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+
+  &__socials {
+    display: flex;
+    gap: 3rem;
+    color: $color-white;
+    font-size: 4rem;
+    // margin-top: 4rem;
+
+    i {
+      cursor: pointer;
+
+      &:hover {
+        transition: all 0.3s;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: $color-blue-purp;
+      }
+    }
+  }
+
+  &__text {
+    font-size: $text-mini;
+    color: $color-white;
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+
+    p {
+      cursor: pointer;
+
+      &:hover {
+        transition: all 0.3s;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: $color-blue-purp;
+      }
+    }
+  }
+}
+
+.footer-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}

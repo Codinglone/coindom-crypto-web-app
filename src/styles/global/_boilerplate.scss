@@ -1,0 +1,94 @@
+@use "./colors" as *;
+@use "./typography" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: $big-font;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 130rem !important;
+  margin: 0 auto !important;
+  padding: 0 2.5rem !important;
+}
+
+// scroll
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #db00d9 #ffffff;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #ba04b7;
+  border: 1px solid #ffffff;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #ed00eb;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #ed00eb;
+}
+
+// spiner
+
+.loader {
+  margin: 10rem auto;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  background-image: linear-gradient(#fff 16px, transparent 0),
+    linear-gradient(#ff00ea 16px, transparent 0),
+    linear-gradient(#ff00ea 16px, transparent 0),
+    linear-gradient(#fff 16px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left top, left bottom, right top, right bottom;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+  }
+  100% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(360deg);
+  }
+}

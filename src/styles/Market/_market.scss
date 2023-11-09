@@ -1,0 +1,144 @@
+@use "../global/" as *;
+
+.market-section {
+  background-color: $bg-black;
+  padding: 5rem 0;
+}
+
+.market-content {
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    color: $color-white;
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 430px) {
+      font-size: 4rem;
+    }
+  }
+
+  &__coin-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    &__top {
+      display: grid;
+      grid-template-columns: 16fr 25fr 25fr 25fr;
+      color: $color-white;
+      font-size: $h4-size;
+      padding: 1.5rem;
+      text-align: right;
+      font-weight: 500;
+      background: $color-blue-purp;
+      border-radius: 8px 8px 0 0;
+      gap: 2rem;
+
+      @media (max-width: 800px) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      p {
+        @media (max-width: 800px) {
+          width: 18rem;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 700px) {
+        width: fit-content;
+      }
+
+      p:first-child {
+        text-align: left;
+      }
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__pagination {
+      display: flex;
+      gap: 1.3rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5rem;
+
+      button {
+        font-size: $text-normal;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .activePagi {
+    background: $color-blue-purp;
+    color: $color-white;
+  }
+
+  .coin-row {
+    display: grid;
+    grid-template-columns: 16fr 25fr 25fr 25fr;
+    color: $color-white;
+    font-size: $h4-size;
+    padding: 2.5rem 1.5rem;
+    text-align: right;
+    font-weight: 500;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid $color-white;
+    align-items: center;
+    gap: 2rem;
+    background-color: $bg-black;
+    user-select: none;
+
+    &:hover {
+      background-color: #200840;
+      cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+      width: fit-content;
+    }
+
+    p:last-child {
+      @media (max-width: 800px) {
+        width: 23rem;
+      }
+    }
+
+    p {
+      @media (max-width: 800px) {
+        width: 15rem;
+      }
+    }
+
+    span {
+      text-align: left;
+      align-items: center;
+      display: flex;
+      gap: 2rem;
+
+      @media (max-width: 800px) {
+        width: 19rem;
+      }
+
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+}
