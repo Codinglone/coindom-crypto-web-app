@@ -35,4 +35,4 @@ The website is connected to the Coingecko API, which is a popular source of data
 </div>
 
 <h2>Follow me on LinkedIn</h2>
-<a href="https://www.linkedin.com/in/fabrice-niyokwizerwa-a8402225a/">Click this link</a>
+<a href="https://www.linkedin.com/in/fabrice-niyokwizerwa-a8402225a/">Click here</a>
